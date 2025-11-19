@@ -1,10 +1,12 @@
+import Logo from './Logo'
+
 function Footer() {
   return (
     <footer className="mt-16 bg-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid gap-8 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <img src="/logo.png" alt="Ludopia" className="h-8 w-auto" />
+            <Logo size="sm" withLabel={false} />
             <span className="font-semibold text-slate-800">Ludopia</span>
           </div>
           <p className="text-sm text-slate-600">

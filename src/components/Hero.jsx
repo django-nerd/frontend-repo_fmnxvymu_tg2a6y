@@ -1,5 +1,7 @@
 import Spline from '@splinetool/react-spline'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import Logo from './Logo'
 
 function Hero() {
   return (
@@ -10,6 +12,9 @@ function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
         <div>
+          <div className="mb-6">
+            <Logo size="lg" />
+          </div>
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
             Ludopia, la plateforme de jeux éducatifs qui simplifie la vie des familles et des enseignants
           </h1>

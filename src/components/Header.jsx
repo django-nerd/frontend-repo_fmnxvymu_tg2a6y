@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
+import Logo from './Logo'
 
 function Header() {
   const navItem = ({ to, label }) => (
@@ -17,8 +18,8 @@ function Header() {
   return (
     <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <img src="/logo-phoenix.svg" alt="Ludopia" className="h-9 w-auto" />
+        <Link to="/" className="flex items-center gap-3" aria-label="Aller à l’accueil Ludopia">
+          <Logo size="md" withLabel={false} className="h-9 w-auto" />
           <span className="sr-only">Ludopia</span>
         </Link>
         <nav className="hidden md:flex items-center gap-1">
