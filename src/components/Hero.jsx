@@ -2,6 +2,7 @@ import Spline from '@splinetool/react-spline'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Logo from './Logo'
+import ErrorBoundary from './ErrorBoundary'
 
 function Hero() {
   return (
@@ -31,9 +32,14 @@ function Hero() {
           </div>
         </div>
         <div className="relative rounded-2xl overflow-hidden border border-amber-200 shadow-xl">
-          {/* If you have a Spline 3D scene URL, replace the URL below */}
           <div className="aspect-video bg-white">
-            <Spline scene="https://prod.spline.design/7b0C7O-Placeholder/scene.splinecode" onLoad={() => {}} />
+            <ErrorBoundary fallback={
+              <div className="w-full h-full flex items-center justify-center text-sm text-amber-800 bg-amber-50">
+                L’espace 3D ne peut pas se charger ici. Il sera remplacé automatiquement.
+              </div>
+            }>
+              <Spline scene="https://prod.spline.design/7b0C7O-Placeholder/scene.splinecode" onLoad={() => {}} />
+            </ErrorBoundary>
           </div>
           <div className="absolute bottom-2 right-2 text-[10px] text-amber-700 bg-white/80 px-2 py-1 rounded">
             Espace 3D interactif (remplacez par votre scène)
