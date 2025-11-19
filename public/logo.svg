@@ -1,0 +1,14 @@
+<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="180" height="48" rx="10" fill="url(#g)"/>
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="180" y2="48" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBEAFE"/>
+<stop offset="1" stop-color="#E0E7FF"/>
+</linearGradient>
+</defs>
+<g>
+<circle cx="24" cy="24" r="12" fill="#3B82F6"/>
+<circle cx="24" cy="24" r="6" fill="#F59E0B"/>
+<text x="48" y="30" font-family="Inter, Arial" font-size="18" font-weight="700" fill="#1F2937">Ludopia</text>
+</g>
+</svg>

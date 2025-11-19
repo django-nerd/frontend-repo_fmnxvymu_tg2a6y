@@ -12,35 +12,20 @@
     --font-manrope: 'Manrope', system-ui, sans-serif;
   }
 
-  html {
-    font-family: var(--font-sans);
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
+  html { font-family: var(--font-sans); font-feature-settings: "rlig" 1, "calt" 1; }
+  body { @apply antialiased text-slate-800; }
 
-  body {
-    @apply antialiased;
-  }
+  h1, h2, h3, h4 { @apply tracking-tight; }
+  a { @apply transition-colors; }
 }
 
-/* Custom utility classes for shadcn/ui patterns */
-@layer utilities {
-  .animate-in {
-    animation-name: animateIn;
-    animation-duration: 350ms;
-    --tw-enter-opacity: initial;
-    --tw-enter-scale: initial;
-    --tw-enter-rotate: initial;
-    --tw-enter-translate-x: initial;
-    --tw-enter-translate-y: initial;
-  }
+@layer components {
+  .btn { @apply inline-flex items-center justify-center font-semibold rounded-md px-4 py-2; }
+  .btn-primary { @apply bg-amber-500 text-white hover:bg-amber-600; }
+  .btn-outline { @apply border border-blue-200 text-blue-800 hover:bg-blue-50; }
+}
 
-  .animate-out {
-    animation-name: animateOut;
-    animation-duration: 350ms;
-    --tw-exit-opacity: initial;
-    --tw-exit-scale: initial;
-    --tw-exit-rotate: initial;
-    --tw-exit-translate-x: initial;
-    --tw-exit-translate-y: initial;
-  }
+@layer utilities {
+  .animate-in { animation-name: animateIn; animation-duration: 350ms; }
+  .animate-out { animation-name: animateOut; animation-duration: 350ms; }
 }
